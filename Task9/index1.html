@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake Store Dashboard</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <h1> Store Dashboard</h1>
+
+    <div class="controls">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Product..."
+        >
+
+        <select id="categoryFilter">
+            <option value="all">All</option>
+            <option value="men's clothing">Men's Clothing</option>
+            <option value="women's clothing">Women's Clothing</option>
+            <option value="electronics">Electronics</option>
+            <option value="jewelery">Jewelry</option>
+        </select>
+
+        <button id="cartBtn">
+            Cart (<span id="cartCount">0</span>)
+        </button>
+
+    </div>
+
+    <h2 id="loading">Loading Products...</h2>
+
+    <div id="statistics"></div>
+
+    <div id="products" class="product-container"></div>
+
+    <div id="cartModal" class="cart-modal" style="display:none; position:fixed; right:20px; top:60px; width:320px; max-height:70vh; overflow:auto; background:#fff; border:1px solid #ccc; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:12px; z-index:9999;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h2 style="margin:0; font-size:18px;">Your Cart (<span id="cartCountModal">0</span>)</h2>
+            <button id="closeCart" style="padding:6px 8px;">Close</button>
+        </div>
+        <div id="cartItems" style="margin-top:8px;"></div>
+    </div>
+
+    <script src="script1.js"></script>
+
+</body>
+</html>
